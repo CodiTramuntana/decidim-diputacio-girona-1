@@ -10,6 +10,7 @@ default: &default
 
 development:
   <<: *default
+  database: "decidim_diputacio_girona_development"
   min_messages: notice
 
 test:
