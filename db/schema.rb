@@ -1019,17 +1019,6 @@ ActiveRecord::Schema.define(version: 2025_06_24_085912) do
     t.index ["decidim_scope_id"], name: "index_decidim_meetings_meetings_on_decidim_scope_id"
   end
 
-  create_table "decidim_meetings_minutes", force: :cascade do |t|
-    t.bigint "decidim_meeting_id"
-    t.jsonb "description"
-    t.string "video_url"
-    t.string "audio_url"
-    t.boolean "visible"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_minutes_on_decidim_meeting_id"
-  end
-
   create_table "decidim_meetings_polls", force: :cascade do |t|
     t.bigint "decidim_meeting_id"
     t.datetime "created_at", precision: 6, null: false
